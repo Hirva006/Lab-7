@@ -1,0 +1,228 @@
+body{
+    margin-top: 50px !important;
+    background: #F15A5C;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+a:hover, a:focus{
+    text-decoration: none !important;
+    outline: none !important;
+    
+}
+.panel-group .panel{
+    background-color: #fff;
+    border:none;
+    box-shadow:none;
+    border-radius: 10px;
+    margin-bottom:11px;
+}
+.panel .panel-heading{
+    padding: 0;
+    border-radius:10px;
+    border: none;
+}
+.panel-heading a{
+    color:#816d6d !important;
+    display: block;
+    border:none;
+    padding:20px 35px 20px;
+    font-size: 20px;
+    background-color:#fff;
+    font-weight:600;
+    position: relative;
+    color:#fff;
+    box-shadow:none;
+    transition:all 0.1s ease 0;
+}
+.panel-heading a:after, .panel-heading a.collapsed:after{
+    content: "\f068";
+    font-family: fontawesome;
+    text-align: center;
+    position: absolute;
+    left:-20px;
+    top: 10px;
+    color:#816d6d !important;
+    background-color:#fff;
+    border: 5px solid #fff;
+    font-size: 15px;
+    width: 40px;
+    height:40px;
+    line-height: 30px;
+    border-radius: 50%;
+    transition:all 0.3s ease 0s;
+}
+.panel-heading:hover a:after,
+.panel-heading:hover a.collapsed:after{
+    transform:rotate(360deg);
+}
+.panel-heading a.collapsed:after{
+    content: "\f067";
+}
+#accordion .panel-body{
+    background-color:#fbf8f8;
+    color:#8C8C8C;
+    line-height: 25px;
+    padding: 10px 25px 20px 35px ;
+    border-top:none;
+    font-size:14px;
+    position: relative;
+}
+.text-white{
+    color:white;
+    text-transform: uppercase;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    top: 50%;
+    animation: loader 2s infinite ease;
+  }
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
+
+/* ------------------ Card Flip Section ------------------ */
+
+h1.heading {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p.description {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for cards */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card container */
+.card {
+  perspective: 1000px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Inner part (for flipping) */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+/* Flip on hover */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back sides */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Front card */
+.front {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Back card */
+.back {
+  background: #222;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.back p {
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.button {
+  padding: 10px 20px;
+  background: #ff5722;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #e64a19;
+}
